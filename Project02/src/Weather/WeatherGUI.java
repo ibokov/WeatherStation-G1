@@ -341,7 +341,7 @@ public class WeatherGUI extends JFrame {
                         tempDialog.setLocationRelativeTo(frame);
                         tempDialog.setVisible(true);
                         dis.dispose();
-                        tempDialog.setDefaultCloseOperation(EXIT_ON_CLOSE);
+                        tempDialog.dispose();
                         
                      
                     }
