@@ -21,20 +21,20 @@ public class WeatherMain {
      */
     public static void main(final String[] theArgs) {        
         // start the GUI in a separate thread
-       System.out.println(UIManager.getSystemLookAndFeelClassName());
-        try {
-            //here you can put the selected theme class name in JTattoo
-            UIManager.setLookAndFeel( "com.jtattoo.plaf.noire.NoireLookAndFeel");
-
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(WeatherMain.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(WeatherMain.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(WeatherMain.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(WeatherMain.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
+//       System.out.println(UIManager.getSystemLookAndFeelClassName());
+//        try {
+//            //here you can put the selected theme class name in JTattoo
+//            UIManager.setLookAndFeel( "com.jtattoo.plaf.noire.NoireLookAndFeel");
+//
+//        } catch (ClassNotFoundException ex) {
+//            java.util.logging.Logger.getLogger(WeatherMain.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+//        } catch (InstantiationException ex) {
+//            java.util.logging.Logger.getLogger(WeatherMain.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+//        } catch (IllegalAccessException ex) {
+//            java.util.logging.Logger.getLogger(WeatherMain.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+//        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
+//            java.util.logging.Logger.getLogger(WeatherMain.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+//        }
         Alerts alert = new Alerts();
     	WeatherGUI gui = new WeatherGUI(alert);
 

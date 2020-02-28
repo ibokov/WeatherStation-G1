@@ -419,25 +419,25 @@ public class Alerts extends JFrame {
 		// check temperature against stored temp alert in map.
 
 		
-
+			
 			if (alertMap.containsKey("Temp") && (myTemperature > alertMap.get("Temp"))) {
-
+				
 				JOptionPane.showMessageDialog(new JFrame(),
 
 						"WARNING \n The Current temperature (fahrenheit) is greater than " + alertMap.get("Temp"));
-
+				alertMap.remove("Temp");
 			} else if (alertMap.containsKey("Pressure") && (myAirPressure > alertMap.get("Pressure"))) {
 
 				JOptionPane.showMessageDialog(new JFrame(),
 
 						"WARNING \n The Current air pressure (bar) is greater than " + alertMap.get("Pressure"));
-
+				alertMap.remove("Pressure");
 			} else if (alertMap.containsKey("Rain") && (myRainFall > alertMap.get("Rain"))) {
 
 				JOptionPane.showMessageDialog(new JFrame(),
 
 						"WARNING \n The Current rainfall (in/h) is greater than " + alertMap.get("Rain"));
-
+				alertMap.remove("Rain");
 			} else if (alertMap.containsKey("Wind Speed") && (myWindSpeed > alertMap.get("Wind Speed"))) {
 
 				
@@ -445,7 +445,7 @@ public class Alerts extends JFrame {
 				JOptionPane.showMessageDialog(new JFrame(),
 
 						"WARNING \n The Current wind speed (mph) is greater than " + alertMap.get("Wind Speed"));
-
+				alertMap.remove("Wind Speed");
 			}
 
 
