@@ -24,6 +24,8 @@ import javax.swing.JPanel;
 import javax.swing.JTabbedPane;
 import javax.swing.JTextArea;
 
+
+
 // TEsting Hyelin
 
 // Testing Ilya
@@ -325,8 +327,16 @@ public class WeatherGUI extends JFrame {
                         // TODO Auto-generated method stub
                         JDialog tempDialog = new JDialog(frame, "Previous Temp", true);
                         JPanel tempPanelPrevious = new JPanel();
+                        tempPanelPrevious.setLayout(new GridLayout(3,1,30,30));
+                        tempPanelPrevious.setBorder(BorderFactory.createEmptyBorder(25,100,20,20));
+                        JLabel tempmaxLabel = new JLabel("Max: " + Storage.tempMax / 10 + " °F");
+                        JLabel tempavgLabel = new JLabel("Average: " + Storage.tempAvg / 10 + " °F");
+                        JLabel tempminLabel = new JLabel("Min: " + Storage.tempMin / 10 + " °F");
+                        tempPanelPrevious.add(tempmaxLabel);
+                        tempPanelPrevious.add(tempavgLabel);
+                        tempPanelPrevious.add(tempminLabel);
                         tempDialog.add(tempPanelPrevious);
-                        tempDialog.setSize(500, 300);
+                        tempDialog.setSize(300, 200);
                         tempDialog.setResizable(false);
                         tempDialog.setLocationRelativeTo(frame);
                         tempDialog.setVisible(true);
@@ -344,8 +354,16 @@ public class WeatherGUI extends JFrame {
                         // TODO Auto-generated method stub
                         JDialog humidDialog = new JDialog(frame, "Previous Humid", true);
                         JPanel humidPanelPrevious = new JPanel();
+                        humidPanelPrevious.setLayout(new GridLayout(3,1,30,30));
+                        humidPanelPrevious.setBorder(BorderFactory.createEmptyBorder(25,100,20,20));
+                        JLabel maxLabel = new JLabel("Max: " + Storage.humMax + " %");
+                        JLabel avgLabel = new JLabel("Average: " + Storage.humAvg + " %");
+                        JLabel minLabel = new JLabel("Min: " + Storage.humMin + " %");
+                        humidPanelPrevious.add(maxLabel);
+                        humidPanelPrevious.add(avgLabel);
+                        humidPanelPrevious.add(minLabel);
                         humidDialog.add(humidPanelPrevious);
-                        humidDialog.setSize(500, 300);
+                        humidDialog.setSize(300, 200);
                         humidDialog.setResizable(false);
                         humidDialog.setLocationRelativeTo(frame);
                         humidDialog.setVisible(true);
@@ -362,13 +380,22 @@ public class WeatherGUI extends JFrame {
                         // TODO Auto-generated method stub
                         JDialog pressureDialog = new JDialog(frame, "Previous Pressure", true);
                         JPanel pressurePanelPrevious = new JPanel();
+                        pressurePanelPrevious.setLayout(new GridLayout(3,1,30,30));
+                        pressurePanelPrevious.setBorder(BorderFactory.createEmptyBorder(25,100,20,20));
+                        JLabel maxLabel = new JLabel("Max: " + Storage.presMax / 1000.0 + " in.");
+                        JLabel avgLabel = new JLabel("Average: " + Storage.presAvg / 1000.0 + " in.");
+                        JLabel minLabel = new JLabel("Min: " + Storage.presMin / 1000.0 + " in.");
+                        pressurePanelPrevious.add(maxLabel);
+                        pressurePanelPrevious.add(avgLabel);
+                        pressurePanelPrevious.add(minLabel);
                         pressureDialog.add(pressurePanelPrevious);
-                        pressureDialog.setSize(500, 300);
+                        pressureDialog.setSize(300, 200);
                         pressureDialog.setResizable(false);
                         pressureDialog.setLocationRelativeTo(frame);
                         pressureDialog.setVisible(true);
                         dis.dispose();
                         pressureDialog.setDefaultCloseOperation(EXIT_ON_CLOSE);
+                        
                         
                     }
                     
@@ -381,8 +408,16 @@ public class WeatherGUI extends JFrame {
                         // TODO Auto-generated method stub
                         JDialog rainDialog = new JDialog(frame, "Previous Rain", true);
                         JPanel rainPanelPrevious = new JPanel();
+                        rainPanelPrevious.setLayout(new GridLayout(3,1,30,30));
+                        rainPanelPrevious.setBorder(BorderFactory.createEmptyBorder(25,100,20,20));
+                        JLabel maxLabel = new JLabel("Max: " + Storage.rainMax / 10.0 + " in./hr.");
+                        JLabel avgLabel = new JLabel("Average: " + Storage.rainAvg / 10.0 + " in./hr.");
+                        JLabel minLabel = new JLabel("Min: " + Storage.rainMin / 10.0 + " in./hr.");
+                        rainPanelPrevious.add(maxLabel);
+                        rainPanelPrevious.add(avgLabel);
+                        rainPanelPrevious.add(minLabel);
                         rainDialog.add(rainPanelPrevious);
-                        rainDialog.setSize(500, 300);
+                        rainDialog.setSize(300, 200);
                         rainDialog.setResizable(false);
                         rainDialog.setLocationRelativeTo(frame);
                         rainDialog.setVisible(true);
@@ -400,8 +435,16 @@ public class WeatherGUI extends JFrame {
                         // TODO Auto-generated method stub
                         JDialog windDialog = new JDialog(frame, "Previous Windspeed", true);
                         JPanel windPanelPrevious = new JPanel();
+                        windPanelPrevious.setLayout(new GridLayout(3,1,30,30));
+                        windPanelPrevious.setBorder(BorderFactory.createEmptyBorder(25,100,20,20));
+                        JLabel maxLabel = new JLabel("Max: " + Storage.speedMax + " miles/hr.");
+                        JLabel avgLabel = new JLabel("Average: " + Storage.speedAvg + " miles/hr.");
+                        JLabel minLabel = new JLabel("Min: " + Storage.speedMin + " miles/hr.");
+                        windPanelPrevious.add(maxLabel);
+                        windPanelPrevious.add(avgLabel);
+                        windPanelPrevious.add(minLabel);
                         windDialog.add(windPanelPrevious);
-                        windDialog.setSize(500, 300);
+                        windDialog.setSize(300, 200);
                         windDialog.setResizable(false);
                         windDialog.setLocationRelativeTo(frame);
                         windDialog.setVisible(true);
