@@ -293,9 +293,11 @@ public class WeatherGUI extends JFrame {
         previousPanel.setLayout(new BorderLayout());
         buttonPanel.setLayout(new FlowLayout());
 
-        JButton hours = new JButton("Hours");
-        JButton days = new JButton("Days");
-        JButton months = new JButton("Months");
+        JButton temp = new JButton("Get Temp");
+        JButton humid = new JButton("Get Humid");
+        JButton pressure = new JButton("Get Pressure");
+        JButton rain = new JButton("Get Rain");
+        JButton wind = new JButton("Get Windspeed");
 
         // Button for previous data
         JButton previousDataButton = new JButton("Get Snapshot");
@@ -306,65 +308,104 @@ public class WeatherGUI extends JFrame {
                 // TODO Auto-generated method stub
                 JDialog dis = new JDialog(frame, "Get Snapshot", true);
                 
-                hours.addActionListener(new ActionListener() {
+                temp.addActionListener(new ActionListener() {
                     @Override
                     public void actionPerformed(ActionEvent e) {
                         // TODO Auto-generated method stub
-                        JDialog hourDialog = new JDialog(frame, "Previous Hours", true);
-                        JPanel hourPanel = new JPanel();
-                        hourDialog.add(hourPanel);
-                        hourDialog.setSize(500, 300);
-                        hourDialog.setResizable(false);
-                        hourDialog.setLocationRelativeTo(frame);
-                        hourDialog.setVisible(true);
+                        JDialog tempDialog = new JDialog(frame, "Previous Temp", true);
+                        JPanel tempPanelPrevious = new JPanel();
+                        tempDialog.add(tempPanelPrevious);
+                        tempDialog.setSize(500, 300);
+                        tempDialog.setResizable(false);
+                        tempDialog.setLocationRelativeTo(frame);
+                        tempDialog.setVisible(true);
                         dis.dispose();
-                        hourDialog.setDefaultCloseOperation(EXIT_ON_CLOSE);
+                        tempDialog.setDefaultCloseOperation(EXIT_ON_CLOSE);
                         
                      
                     }
                 });
                
-                days.addActionListener(new ActionListener() {
+                humid.addActionListener(new ActionListener() {
 
                     @Override
                     public void actionPerformed(ActionEvent e) {
                         // TODO Auto-generated method stub
-                        JDialog dayDialog = new JDialog(frame, "Previous Days", true);
-                        JPanel dayPanel = new JPanel();
-                        dayDialog.add(dayPanel);
-                        dayDialog.setSize(500, 300);
-                        dayDialog.setResizable(false);
-                        dayDialog.setLocationRelativeTo(frame);
-                        dayDialog.setVisible(true);
+                        JDialog humidDialog = new JDialog(frame, "Previous Humid", true);
+                        JPanel humidPanelPrevious = new JPanel();
+                        humidDialog.add(humidPanelPrevious);
+                        humidDialog.setSize(500, 300);
+                        humidDialog.setResizable(false);
+                        humidDialog.setLocationRelativeTo(frame);
+                        humidDialog.setVisible(true);
                         dis.dispose();
-                        dayDialog.setDefaultCloseOperation(EXIT_ON_CLOSE);
+                        humidDialog.setDefaultCloseOperation(EXIT_ON_CLOSE);
                         
                     }
                 });
                 
-                months.addActionListener(new ActionListener() {
+                pressure.addActionListener(new ActionListener() {
 
                     @Override
                     public void actionPerformed(ActionEvent e) {
                         // TODO Auto-generated method stub
-                        JDialog monthDialog = new JDialog(frame, "Previous Months", true);
-                        JPanel monthPanel = new JPanel();
-                        monthDialog.add(monthPanel);
-                        monthDialog.setSize(500, 300);
-                        monthDialog.setResizable(false);
-                        monthDialog.setLocationRelativeTo(frame);
-                        monthDialog.setVisible(true);
+                        JDialog pressureDialog = new JDialog(frame, "Previous Pressure", true);
+                        JPanel pressurePanelPrevious = new JPanel();
+                        pressureDialog.add(pressurePanelPrevious);
+                        pressureDialog.setSize(500, 300);
+                        pressureDialog.setResizable(false);
+                        pressureDialog.setLocationRelativeTo(frame);
+                        pressureDialog.setVisible(true);
                         dis.dispose();
-                        monthDialog.setDefaultCloseOperation(EXIT_ON_CLOSE);
+                        pressureDialog.setDefaultCloseOperation(EXIT_ON_CLOSE);
+                        
+                    }
+                    
+                });
+                
+                rain.addActionListener(new ActionListener() {
+
+                    @Override
+                    public void actionPerformed(ActionEvent e) {
+                        // TODO Auto-generated method stub
+                        JDialog rainDialog = new JDialog(frame, "Previous Rain", true);
+                        JPanel rainPanelPrevious = new JPanel();
+                        rainDialog.add(rainPanelPrevious);
+                        rainDialog.setSize(500, 300);
+                        rainDialog.setResizable(false);
+                        rainDialog.setLocationRelativeTo(frame);
+                        rainDialog.setVisible(true);
+                        dis.dispose();
+                        rainDialog.setDefaultCloseOperation(EXIT_ON_CLOSE);
                         
                     }
                     
                 });
               
-                buttonPanel.add(hours);
-                buttonPanel.add(days);
-                buttonPanel.add(months);
+                wind.addActionListener(new ActionListener() {
 
+                    @Override
+                    public void actionPerformed(ActionEvent e) {
+                        // TODO Auto-generated method stub
+                        JDialog windDialog = new JDialog(frame, "Previous Windspeed", true);
+                        JPanel windPanelPrevious = new JPanel();
+                        windDialog.add(windPanelPrevious);
+                        windDialog.setSize(500, 300);
+                        windDialog.setResizable(false);
+                        windDialog.setLocationRelativeTo(frame);
+                        windDialog.setVisible(true);
+                        dis.dispose();
+                        windDialog.setDefaultCloseOperation(EXIT_ON_CLOSE);
+                        
+                    }
+                    
+                });
+                buttonPanel.add(temp);
+                buttonPanel.add(humid);
+                buttonPanel.add(pressure);
+                buttonPanel.add(rain);
+                buttonPanel.add(wind);
+                
                 centerPanel.add(previousLabel);
                 previousPanel.add(centerPanel, BorderLayout.CENTER);
                 previousPanel.add(buttonPanel, BorderLayout.SOUTH);
