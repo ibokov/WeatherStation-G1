@@ -1,12 +1,15 @@
 package Weather;
 import java.io.BufferedWriter;
 import java.io.File;
+import java.io.FileNotFoundException;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Scanner;
 
 /**
  * 
@@ -163,6 +166,46 @@ public class Storage {
 	 */
 	static BufferedWriter wIconWriter;
 	
+	static int tempMax;
+	static int tempAvg;
+	static int tempMin;
+	
+	static int humMax;
+	static int humAvg;
+	static int humMin;
+	
+	static int presMax;
+	static int presAvg;
+	static int presMin;
+	
+	static int speedMax;
+	static int speedAvg;
+	static int speedMin;
+	
+	static int dirMax;
+	static int dirAvg;
+	static int dirMin;
+	
+	static int phaseMax;
+	static int phaseAvg;
+	static int phaseMin;
+	
+	static int rainMax;
+	static int rainAvg;
+	static int rainMin;
+	
+	static int riseMax;
+	static int riseAvg;
+	static int riseMin;
+	
+	static int setMax;
+	static int setAvg;
+	static int setMin;
+	
+	static int wIconMax;
+	static int wIconAvg;
+	static int wIconMin;
+	
  	
 	public Storage() {
 		/**
@@ -209,7 +252,6 @@ public class Storage {
 		    wIconWriter = new BufferedWriter(new FileWriter("wIconFile.txt", true));
 			
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		/**
@@ -256,6 +298,124 @@ public class Storage {
 		 * Initializes a the weather Icon list
 		 */
 		wIconList = new ArrayList<Integer>();
+		
+		Scanner scanner;
+		int total = 0;
+		try {
+			scanner = new Scanner(tempFile);
+			total = 0;
+			while(scanner.hasNextInt()) {
+				int temp = scanner.nextInt();
+				tempList.add(temp);
+				total += temp;
+			}
+			tempMax = Collections.max(tempList);
+			tempMin = Collections.min(tempList);
+			tempAvg = total / tempList.size();
+			
+			scanner = new Scanner(humFile);
+			total = 0;
+			while(scanner.hasNextInt()) {
+				int temp = scanner.nextInt();
+				humList.add(temp);
+				total += temp;
+			}
+			humMax = Collections.max(humList);
+			humMin = Collections.min(humList);
+			humAvg = total / humList.size();
+			
+			scanner = new Scanner(presFile);
+			total = 0;
+			while(scanner.hasNextInt()) {
+				int temp = scanner.nextInt();
+				presList.add(temp);
+				total += temp;
+			}
+			presMax = Collections.max(presList);
+			presMin = Collections.min(presList);
+			presAvg = total / presList.size();
+			
+			scanner = new Scanner(speedFile);
+			total = 0;
+			while(scanner.hasNextInt()) {
+				int temp = scanner.nextInt();
+				speedList.add(temp);
+				total += temp;
+			}
+			speedMax = Collections.max(speedList);
+			speedMin = Collections.min(speedList);
+			speedAvg = total / speedList.size();
+			
+			scanner = new Scanner(dirFile);
+			total = 0;
+			while(scanner.hasNextInt()) {
+				int temp = scanner.nextInt();
+				dirList.add(temp);
+				total += temp;
+			}
+			dirMax = Collections.max(dirList);
+			dirMin = Collections.min(dirList);
+			dirAvg = total / dirList.size();
+			
+			scanner = new Scanner(phaseFile);
+			total = 0;
+			while(scanner.hasNextInt()) {
+				int temp = scanner.nextInt();
+				phaseList.add(temp);
+				total += temp;
+			}
+			phaseMax = Collections.max(phaseList);
+			phaseMin = Collections.min(phaseList);
+			phaseAvg = total / phaseList.size();
+			
+			scanner = new Scanner(rainFile);
+			total = 0;
+			while(scanner.hasNextInt()) {
+				int temp = scanner.nextInt();
+				rainList.add(temp);
+				total += temp;
+			}
+			rainMax = Collections.max(rainList);
+			rainMin = Collections.min(rainList);
+			rainAvg = total / rainList.size();
+			
+			scanner = new Scanner(sunRiseFile);
+			total = 0;
+			while(scanner.hasNextInt()) {
+				int temp = scanner.nextInt();
+				riseList.add(temp);
+				total += temp;
+			}
+			riseMax = Collections.max(riseList);
+			riseMin = Collections.min(riseList);
+			riseAvg = total / riseList.size();
+			
+			scanner = new Scanner(sunSetFile);
+			total = 0;
+			while(scanner.hasNextInt()) {
+				int temp = scanner.nextInt();
+				setList.add(temp);
+				total += temp;
+			}
+			setMax = Collections.max(setList);
+			setMin = Collections.min(setList);
+			setAvg = total / setList.size();
+			
+			scanner = new Scanner(wIconFile);
+			total = 0;
+			while(scanner.hasNextInt()) {
+				int temp = scanner.nextInt();
+				wIconList.add(temp);
+				total += temp;
+			}
+			wIconMax = Collections.max(wIconList);
+			wIconMin = Collections.min(wIconList);
+			wIconAvg = total / wIconList.size();
+			
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
+		}
+		
 	}
 	
 	/**
