@@ -240,16 +240,18 @@ public class WeatherGUI extends JFrame {
 
         
         JPanel westLayoutSubPanel = new JPanel();
-        westLayoutSubPanel.setLayout(new GridLayout(0, 1, 70, 40));
-        westLayoutSubPanel.setBorder(BorderFactory.createEmptyBorder(20,0,0,0));
+        westLayoutSubPanel.setLayout(new GridLayout(0, 1, 70, 50));
+        westLayoutSubPanel.setBorder(BorderFactory.createEmptyBorder(30,0,0,0));
         
         JPanel dataNorth = new JPanel();
         dataNorth.setLayout(new FlowLayout());
 
         JPanel buttonNorth = new JPanel();
         buttonNorth.setLayout(new FlowLayout());
+        
+        
         // Example Button addition into the South Panel Layout
-        // ADD BUTTONS TO SOUTH PANEL.
+        // ADD BUTTONS TO WEST PANEL.
         JButton tempButton = new JButton(new GraphButtonAction(GraphPanel.TEMP_SENSOR, "Graph Temperature"));
         JButton pressureButton = new JButton(new GraphButtonAction(GraphPanel.PRESSURE_SENSOR, "Graph Pressure"));
         JButton humidityButton = new JButton(new GraphButtonAction(GraphPanel.HUMIDITY_SENSOR, "Graph Humidity"));
@@ -285,6 +287,7 @@ public class WeatherGUI extends JFrame {
         
 
         JLabel previousLabel = new JLabel("Please select one.");
+        JPanel centerPanel = new JPanel(new FlowLayout());
         JPanel previousPanel = new JPanel();
         JPanel buttonPanel = new JPanel();
         previousPanel.setLayout(new BorderLayout());
@@ -362,7 +365,8 @@ public class WeatherGUI extends JFrame {
                 buttonPanel.add(days);
                 buttonPanel.add(months);
 
-                previousPanel.add(previousLabel, BorderLayout.CENTER);
+                centerPanel.add(previousLabel);
+                previousPanel.add(centerPanel, BorderLayout.CENTER);
                 previousPanel.add(buttonPanel, BorderLayout.SOUTH);
                 dis.add(previousPanel);
 
@@ -372,68 +376,26 @@ public class WeatherGUI extends JFrame {
                 dis.setVisible(true);
             }
         });
-
-        // Button for alert
-
-       
-        // Button for about
-        JButton aboutButtonTop = new JButton("About");
-        aboutButtonTop.addActionListener(new ActionListener() {
-
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                // TODO Auto-generated method stub
-                JTabbedPane aboutTab = new JTabbedPane();
-                JTextArea about = new JTextArea();
-                JTextArea getSanpshot = new JTextArea();
-                JTextArea alert = new JTextArea();
-                about.setEditable(false);
-                getSanpshot.setEditable(false);
-                alert.setEditable(false);
-                about.append("Our weather stations help professionals and" + "\n"
-                        + "hobbyists measure, monitor, and manage weather data. ");
-                getSanpshot.append("about get snapshot");
-                alert.append("about alert");
-                aboutTab.addTab("About", about);
-                aboutTab.addTab("About Get Snapshot", getSanpshot);
-                aboutTab.addTab("About Alert", alert);
-                JDialog dis = new JDialog(frame, "About", true);
-                dis.add(aboutTab);
-                dis.setSize(350, 350);
-                dis.setResizable(false);
-                dis.setLocationRelativeTo(frame);
-                dis.setVisible(true);
-            }
-        });
         
         
         alertAlarm = new Alerts();
-//        JButton alert = new JButton("Alert");
-//        aboutButtonTop.addActionListener(new ActionListener() {
-//
-//            @Override
-//            public void actionPerformed(ActionEvent e) {
-//                // TODO Auto-generated method stub
-//                alertAlarm.getAlarmButton();
-//            }
-//        });
-        
+
         westLayoutSubPanel.add(tempButton);
         westLayoutSubPanel.add(pressureButton);
         westLayoutSubPanel.add(humidityButton);
         westLayoutSubPanel.add(rainfallButton);
         westLayoutSubPanel.add(windspeedButton);
-        westLayoutSubPanel.add(aboutButton);
+        //westLayoutSubPanel.add(aboutButton);
 
 
         westLayoutPanel.add(westLayoutSubPanel);
 
-        buttonNorth.add(aboutButtonTop);
+        buttonNorth.add(aboutButton);
         buttonNorth.add(previousDataButton);
-        //buttonNorth.add(alertButton);
+
         buttonNorth.add(alertAlarm.getAlarmButton());
         buttonNorth.add(close);
-//        buttonNorth.add(alertAlarm.getAlarmButton());
+
         
         
        
