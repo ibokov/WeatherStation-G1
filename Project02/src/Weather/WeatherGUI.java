@@ -136,7 +136,7 @@ public class WeatherGUI extends JFrame {
      * @param theAlert
      */
     public WeatherGUI(Alerts theAlert) {
-        //alertAlarm = theAlert;
+        alertAlarm = theAlert;
         start();
     }
 
@@ -161,7 +161,7 @@ public class WeatherGUI extends JFrame {
         JFrame frame = new JFrame();
         JPanel tempPanel = new JPanel();
         tempPanel.setBorder(BorderFactory.createLineBorder(Color.white));
-        tempReadout = new JLabel("Temp: -- Â°F");
+        tempReadout = new JLabel("Temp: -- �F");
         tempPanel.add(tempReadout);
 
         JPanel humidPanel = new JPanel();
@@ -217,7 +217,6 @@ public class WeatherGUI extends JFrame {
         sunsetReadout = new JLabel("Sunset: --:-- p.m.");
         sunsetPanel.add(sunsetReadout);
 
-        //  JButton alertButton = alertAlarm.getAlarmButton();
 
         AboutInfo = new About();
         JButton aboutButton = new JButton("About Info");
@@ -232,6 +231,18 @@ public class WeatherGUI extends JFrame {
             }
         });
 
+        
+        JButton alertButton1 = new JButton("Alert");
+
+        alertButton1.addActionListener(new ActionListener() {
+
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                alertAlarm.setVisible(true);
+                
+
+            }
+        });
         JPanel northLayoutPanel = new JPanel();
         northLayoutPanel.setLayout(new BorderLayout());
 
@@ -462,7 +473,7 @@ public class WeatherGUI extends JFrame {
         });
         
         
-        alertAlarm = new Alerts();
+//        alertAlarm = new Alerts();
 
         westLayoutSubPanel.add(tempButton);
         westLayoutSubPanel.add(pressureButton);
@@ -477,9 +488,9 @@ public class WeatherGUI extends JFrame {
         buttonNorth.add(aboutButton);
         buttonNorth.add(previousDataButton);
 
-        buttonNorth.add(alertAlarm.getAlarmButton());
+        buttonNorth.add(alertButton1);
         buttonNorth.add(close);
-
+        //buttonNorth.add(alertAlarm.getAlarmButton());
         
         
        
