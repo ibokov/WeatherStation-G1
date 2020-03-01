@@ -166,45 +166,45 @@ public class Storage {
 	 */
 	static BufferedWriter wIconWriter;
 	
-	static int tempMax;
-	static int tempAvg;
-	static int tempMin;
+	public static int tempMax;
+	public static int tempAvg;
+	public static int tempMin;
 	
-	static int humMax;
-	static int humAvg;
-	static int humMin;
+	public static int humMax;
+	public static int humAvg;
+	public static int humMin;
 	
-	static int presMax;
-	static int presAvg;
-	static int presMin;
+	public static int presMax;
+	public static int presAvg;
+	public static int presMin;
 	
-	static int speedMax;
-	static int speedAvg;
-	static int speedMin;
+	public static int speedMax;
+	public static int speedAvg;
+	public static int speedMin;
 	
-	static int dirMax;
-	static int dirAvg;
-	static int dirMin;
+	public static int dirMax;
+	public static int dirAvg;
+	public static int dirMin;
 	
-	static int phaseMax;
-	static int phaseAvg;
-	static int phaseMin;
+	public static int phaseMax;
+	public static int phaseAvg;
+	public static int phaseMin;
 	
-	static int rainMax;
-	static int rainAvg;
-	static int rainMin;
+	public static int rainMax;
+	public static int rainAvg;
+	public static int rainMin;
 	
-	static int riseMax;
-	static int riseAvg;
-	static int riseMin;
+	public static int riseMax;
+	public static int riseAvg;
+	public static int riseMin;
 	
-	static int setMax;
-	static int setAvg;
-	static int setMin;
+	public static int setMax;
+	public static int setAvg;
+	public static int setMin;
 	
-	static int wIconMax;
-	static int wIconAvg;
-	static int wIconMin;
+	public static int wIconMax;
+	public static int wIconAvg;
+	public static int wIconMin;
 	
  	
 	public Storage() {
@@ -577,95 +577,5 @@ public class Storage {
 			e.printStackTrace();
 		}
 		infoMap.put("WeatherIcon", wIconList);
-	}
-	
-	/**
-	 * returns the temp list
-	 * @param temp
-	 * @return
-	 */
-	public List<Integer> getTemp(int temp) {
-		return tempList;
-	}
-	
-	/**
-	 * returns the humidity list
-	 * @param hum
-	 * @return
-	 */
-	public List<Integer> getHum(int hum) {
-		return humList;
-	}
-	
-	/**
-	 * returns the pressire list
-	 * @param pressure
-	 * @return
-	 */
-	public List<Integer> getPres(int pressure) {
-		return presList;
-	}
-	
-	/**
-	 * returns the wind speed list
-	 * @param speed
-	 * @return
-	 */
-	public List<Integer> getWindSpeed(int speed) {
-		return speedList;
-	}
-	
-	/**
-	 * returns the wind direction list
-	 * @param dir
-	 * @return
-	 */
-	public List<Integer> getWindDir(int dir) {
-		return dirList;
-	}
-	
-	/**
-	 * returns the moon phase list
-	 * @param phase
-	 * @return
-	 */
-	public List<Integer> getMoonPhase(int phase) {
-		return phaseList;
-	}
-	
-	/**
-	 * returns the rain list
-	 * @param rain
-	 * @return
-	 */
-	public List<Integer> getRain(int rain) {
-		return rainList;
-	}
-	
-	/**
-	 * returns the sun rise list
-	 * @param sunRise
-	 * @return
-	 */
-	public List<Integer> getSunRise(int sunRise) {
-		return rainList;
-	}
-	
-	/**
-	 * returns the sunset list
-	 * @param sunSet
-	 * @return
-	 */
-	public List<Integer> getSunSet(int sunSet) {
-		return setList;
-	}
-	
-	/**
-	 * returns the weather icon list
-	 * @param WIcon
-	 * @return
-	 */
-	public List<Integer> getWIcon(int WIcon) {
-		return wIconList;
 	}
 }
