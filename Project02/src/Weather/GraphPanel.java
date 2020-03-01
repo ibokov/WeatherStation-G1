@@ -78,7 +78,7 @@ public class GraphPanel extends JPanel {
 	/**
 	 * The names of the respective sensors
 	 */
-	private static final String[] SENSOR_NAMES = {"Temp (Â°F)", "Pressure (in.)", "Humidity (%)", 
+	private static final String[] SENSOR_NAMES = {"Temp (°F)", "Pressure (in.)", "Humidity (%)", 
 							"Rainfall (in./hr.)", "Wind Speed (mph)"};
 	
 	/**
@@ -224,7 +224,7 @@ public class GraphPanel extends JPanel {
 		g2d.setRenderingHint(RenderingHints.KEY_STROKE_CONTROL,
                  RenderingHints.VALUE_STROKE_PURE);
 		
-		g2d.setColor(Color.white);
+		g2d.setColor(Color.black);
 		g2d.setStroke(myStroke);
 		
 		// draw the background of the graph

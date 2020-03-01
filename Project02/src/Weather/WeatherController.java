@@ -143,7 +143,7 @@ public class WeatherController implements Runnable {
 			alert.setPressure(pressure);
 			alert.setWindSpeed(windspd);
 			alert.setRain(rain);
-
+//			System.out.println("TESTING GET TEMP ALERT " + alert.getTemp());
 			alert.checkAlert();
 
 		}

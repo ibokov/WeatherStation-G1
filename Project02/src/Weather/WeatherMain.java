@@ -3,8 +3,6 @@ package Weather;
 
 import java.awt.EventQueue;
 
-import javax.swing.UIManager;
-
 
 public class WeatherMain {
     /**

@@ -136,16 +136,6 @@ public class Alerts extends JFrame {
 
 
 
-	/**
-
-	 * A boolean flag that checks if an alert has been set or not.
-
-	 */
-
-	private boolean myFlag;
-
-	
-
 	public Alerts() {
 
 		alarmButton = new JButton("Alerts");
@@ -160,10 +150,6 @@ public class Alerts extends JFrame {
 		this.setResizable(false);
 		this.setLocationRelativeTo(this);
 		
-		myFlag = false;
-
-		
-
 		this.addWindowListener(new WindowAdapter() {
 
 			
@@ -348,15 +334,9 @@ public class Alerts extends JFrame {
 
 						alertMap.put("Temp", tempValue);
 
-						myFlag = true;
-
 					} else if (myWind.isSelected() && !textValue.getText().isEmpty()) {
 
 						alertMap.put("Wind Speed",  tempValue);
-
-
-
-						myFlag = true;
 
 //						System.out.println(alertMap.get("Wind Speed"));
 
@@ -366,13 +346,9 @@ public class Alerts extends JFrame {
 
 						alertMap.put("Rain",  tempValue);
 
-						myFlag = true;
-
 					} else if (myPressure.isSelected() && !textValue.getText().isEmpty()) {
 
 						alertMap.put("Pressure",  tempValue);
-
-						myFlag = true;
 
 					} 
 
@@ -410,7 +386,7 @@ public class Alerts extends JFrame {
 
 	 * 
 
-	 * @param theValues the HashMap of the weather alerts. 
+	 *
 
 	 */
 
@@ -472,7 +448,7 @@ public class Alerts extends JFrame {
 
 		myTemperature = theTemperature / 10.0;
 
-
+		
 
 	}
 
@@ -556,6 +532,39 @@ public class Alerts extends JFrame {
 
 		return alertMap;
 
+	}
+	
+	/**
+	 * Get method for Temperature.
+	 * @return a double of temperature.
+	 */
+	public Double getTemp() {
+		
+		return myTemperature;
+	}
+	
+	/**
+	 * Get method for Wind Speed.
+	 * @return a double of wind speed.
+	 */
+	public Double getWindSpeed() {
+		return myWindSpeed;
+	}
+	
+	/**
+	 * Get method for Rain fall in inches.
+	 * @return a Double for rainfall measurement in inches.
+	 */
+	public Double getRain() {
+		return myRainFall;
+	}
+	
+	/**
+	 * Get method for air pressure.
+	 * @return a Double for air pressure measurement.
+	 */
+	public Double getPressure() {
+		return myAirPressure;
 	}
 
 }

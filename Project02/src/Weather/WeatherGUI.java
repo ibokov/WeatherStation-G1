@@ -5,7 +5,6 @@ import java.awt.Dimension;
 import java.awt.FlowLayout;
 import java.awt.GridLayout;
 import java.awt.Image;
-import java.awt.Rectangle;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.IOException;
@@ -21,8 +20,9 @@ import javax.swing.JDialog;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
-import javax.swing.JTabbedPane;
-import javax.swing.JTextArea;
+import javax.swing.WindowConstants;
+
+
 
 
 
@@ -340,8 +340,7 @@ public class WeatherGUI extends JFrame {
                         tempDialog.setResizable(false);
                         tempDialog.setLocationRelativeTo(frame);
                         tempDialog.setVisible(true);
-                        dis.dispose();
-                        tempDialog.dispose();
+                        tempDialog.setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
                         
                      
                     }
@@ -367,8 +366,7 @@ public class WeatherGUI extends JFrame {
                         humidDialog.setResizable(false);
                         humidDialog.setLocationRelativeTo(frame);
                         humidDialog.setVisible(true);
-                        dis.dispose();
-                        humidDialog.setDefaultCloseOperation(EXIT_ON_CLOSE);
+                        humidDialog.setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
                         
                     }
                 });
@@ -393,8 +391,7 @@ public class WeatherGUI extends JFrame {
                         pressureDialog.setResizable(false);
                         pressureDialog.setLocationRelativeTo(frame);
                         pressureDialog.setVisible(true);
-                        dis.dispose();
-                        pressureDialog.setDefaultCloseOperation(EXIT_ON_CLOSE);
+                        pressureDialog.setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
                         
                         
                     }
@@ -421,8 +418,7 @@ public class WeatherGUI extends JFrame {
                         rainDialog.setResizable(false);
                         rainDialog.setLocationRelativeTo(frame);
                         rainDialog.setVisible(true);
-                        dis.dispose();
-                        rainDialog.setDefaultCloseOperation(EXIT_ON_CLOSE);
+                        rainDialog.setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
                         
                     }
                     
@@ -448,8 +444,7 @@ public class WeatherGUI extends JFrame {
                         windDialog.setResizable(false);
                         windDialog.setLocationRelativeTo(frame);
                         windDialog.setVisible(true);
-                        dis.dispose();
-                        windDialog.setDefaultCloseOperation(EXIT_ON_CLOSE);
+                        windDialog.setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
                         
                     }
                     
@@ -465,7 +460,7 @@ public class WeatherGUI extends JFrame {
                 previousPanel.add(buttonPanel, BorderLayout.SOUTH);
                 dis.add(previousPanel);
 
-                dis.setSize(500, 100);
+                dis.setSize(625, 100);
                 dis.setResizable(false);
                 dis.setLocationRelativeTo(frame);
                 dis.setVisible(true);
@@ -535,7 +530,7 @@ public class WeatherGUI extends JFrame {
     public void setTemp(int temp) {
         String raw = Integer.toString(temp);
         tempReadout
-                .setText("Temp: " + raw.substring(0, raw.length() - 1) + "." + raw.substring(raw.length() - 1) + " Â°F");
+                .setText("Temp: " + raw.substring(0, raw.length() - 1) + "." + raw.substring(raw.length() - 1) + " �F");
         if (graphPanel != null) {
             graphPanel.updateSensorValue(GraphPanel.TEMP_SENSOR, temp);
         }
