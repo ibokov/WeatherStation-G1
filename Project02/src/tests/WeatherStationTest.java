@@ -1,3 +1,9 @@
+/**
+ *
+ * Project 02: Group 1
+ * ilya, elias, nicholas, hyelin
+ */
+
 package tests;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -8,6 +14,9 @@ import org.junit.jupiter.api.Test;
 
 import Weather.WeatherStation;
 
+/**
+ * JUnit test for weather station.
+ */
 class WeatherStationTest {
 
 @BeforeAll

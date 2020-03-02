@@ -1,3 +1,8 @@
+/**
+ *
+ * Project 02: Group 1
+ * ilya, elias, nicholas, hyelin
+ */
 package Weather;
 import java.awt.BorderLayout;
 import java.awt.Color;
@@ -26,16 +31,12 @@ import javax.swing.WindowConstants;
 
 
 
-// TEsting Hyelin
 
-// Testing Ilya
-
-// Testing Elias
 /**
  * The main GUI for the weather console.
  * 
- * @author Group 1, Ilya Bokov, Elias Salmo, Nicholas Babcock
- * @version 13 February, 2020
+ * @author Group 1, Ilya Bokov, Elias Salmo, Nicholas Babcock, Hyelin Park.
+ * @version 27 February, 2020
  */
 public class WeatherGUI extends JFrame {
     /**
@@ -500,8 +501,6 @@ public class WeatherGUI extends JFrame {
         dataNorth.add(sunsetPanel);
 
         northLayoutPanel.add(buttonNorth, BorderLayout.WEST);
-//         northLayoutPanel.add(alertAlarm.getAlarmButton(), BorderLayout.CENTER);
-        //northLayoutPanel.add(close, BorderLayout.EAST);
         northLayoutPanel.add(dataNorth, BorderLayout.SOUTH);
 
         eastLayoutPanel.add(windPanel);

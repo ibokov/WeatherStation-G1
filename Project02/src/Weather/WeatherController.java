@@ -1,3 +1,9 @@
+/**
+ *
+ * Project 02: Group 1
+ * ilya, elias, nicholas, hyelin
+ */
+
 package Weather;
 
 import java.nio.ByteBuffer;

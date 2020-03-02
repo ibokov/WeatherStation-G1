@@ -1,3 +1,9 @@
+/**
+ *
+ * Project 02: Group 1
+ * ilya, elias, nicholas, hyelin
+ */
+
 package tests;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -7,7 +13,7 @@ import Weather.GraphPanel;
 
 /**
  * The JUnit tests for the GraphPanel class.
- * @author Group 6
+ * @author Group 1
  *
  */
 class GraphPanelTest {

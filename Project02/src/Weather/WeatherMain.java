@@ -1,9 +1,19 @@
+/**
+ *
+ * Project 02: Group 1
+ * ilya, elias, nicholas, hyelin
+ */
+
 package Weather;
 
 
 import java.awt.EventQueue;
 
-
+/**
+ * Starts the process for the whole program.
+ * @author Group 1
+ * @version 27 February 2020
+ */
 public class WeatherMain {
     /**
      * The constructor for the PowerPaintMain class, set private so it can't be instantiated.

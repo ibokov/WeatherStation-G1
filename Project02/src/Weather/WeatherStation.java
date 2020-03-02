@@ -1,3 +1,9 @@
+/**
+ *
+ * Project 02: Group 1
+ * ilya, elias, nicholas, hyelin
+ */
+
 package Weather;
 
 import java.nio.ByteBuffer;
@@ -6,8 +12,8 @@ import java.util.Random;
 /**
  * A "proxy" class that simulates a physical weather station and generates packets of data.
  *
- * @author Group 6 Ilya B. Neil H. Jason L. Brandon K.
- * @version January 26, 2020
+ * @author Group 1
+ * @version 25 February, 2020
  */
 public class WeatherStation{
 	/**

@@ -1,3 +1,9 @@
+/**
+ *
+ * Project 02: Group 1
+ * ilya, elias, nicholas, hyelin
+ */
+
 package Weather;
 
 
@@ -19,7 +25,7 @@ import javax.swing.JPanel;
 /**
  * The JPanel on which graph data can be displayed.
  * 
- * @author Group 6
+ * @author Group 1
  *
  */
 public class GraphPanel extends JPanel {

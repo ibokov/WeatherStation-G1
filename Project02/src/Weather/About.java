@@ -1,3 +1,9 @@
+/**
+ *
+ * Project 02: Group 1
+ * ilya, elias, nicholas, hyelin
+ */
+
 package Weather;
 import java.awt.Component;
 
@@ -6,7 +12,7 @@ import javax.swing.JTabbedPane;
 import javax.swing.JTextArea;
 
 /**
- * A class about the relevent information for the Weather Vantage Vue system. 
+ * A class about the relevant information for the Weather Vantage Vue system.
  * A simple description of all the components. 
  * @author Ilya Bokov
  * @version February 14, 2020

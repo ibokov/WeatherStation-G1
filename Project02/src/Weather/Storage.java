@@ -1,3 +1,9 @@
+/**
+ *
+ * Project 02: Group 1
+ * ilya, elias, nicholas, hyelin
+ */
+
 package Weather;
 import java.io.BufferedWriter;
 import java.io.File;
@@ -11,9 +17,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Scanner;
 
-/**
- * 
- */
+
 
 /**
  * @author Elias Salmo
@@ -565,7 +569,7 @@ public class Storage {
 	
 	/**
 	 * Adds the weather Icon data and stores it into a map
-	 * @param WIcon
+	 * @param wIcon
 	 */
 	public void addWIcon(int wIcon) {
 		wIconList.add(wIcon);

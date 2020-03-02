@@ -1,3 +1,8 @@
+/**
+ *
+ * Project 02: Group 1
+ * ilya, elias, nicholas, hyelin
+ */
 package tests;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -18,7 +23,7 @@ import Weather.Storage;
 /**
  * The tests for the WeatherController class.
  * 
- * @author Group 6
+ * @author Group 1
  *
  */
 class WeatherControllerTest {

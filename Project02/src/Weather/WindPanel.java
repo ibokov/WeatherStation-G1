@@ -1,3 +1,9 @@
+/**
+ *
+ * Project 02: Group 1
+ * ilya, elias, nicholas, hyelin
+ */
+
 package Weather;
 
 
@@ -15,7 +21,8 @@ import javax.swing.JPanel;
 /**
  * The panel that shows the wind speed and direction graphically.
  * 
- * @author Group 6
+ * @author Group 6(project 1), Group 1
+ * @versio 27 February 2020
  *
  */
 public class WindPanel extends JPanel {
